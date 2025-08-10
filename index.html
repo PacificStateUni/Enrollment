@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form | PSI University</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://pictures.altai-travel.com/1920x1040/mount-everest-aerial-view-himalayas-istock-3745.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #4fc3f7;
+            text-shadow: 0 0 15px rgba(79, 195, 247, 0.7);
+            text-align: center;
+        }
+
+        h2 {
+            color: #81c784;
+            text-shadow: 0 0 10px rgba(129, 199, 132, 0.5);
+            border-bottom: 1px solid #4fc3f7;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #81c784;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #4fc3f7;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234fc3f7'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+        }
+
+        .radio-group {
+            margin: 15px 0;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .radio-option input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(45deg, #1565c0, #4fc3f7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 30px 0;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(79, 195, 247, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(79, 195, 247, 0.9);
+        }
+
+        .back-link {
+            color: #b0bec5;
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #4fc3f7;
+        }
+
+        /* Custom colors for start date options */
+        #startDate option:nth-child(1) { color: #ffd54f; } /* Immediately */
+        #startDate option:nth-child(2) { color: #81c784; } /* Within 1 week */
+        #startDate option:nth-child(3) { color: #ff8a65; } /* Within 2 weeks */
+        #startDate option:nth-child(4) { color: #ba68c8; } /* Within 1 month */
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Enrollment Form</h1>
+            
+            <form id="enrollmentForm" action="https://formsubmit.co/ps.international.university@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New PSI University Enrollment">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="Full Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="Phone">
+                </div>
+                
+                <h2>Program Selection</h2>
+                <div class="form-group">
+                    <label>Choose Your Course</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="course1" name="Course" value="Global Business & Digital Finance" required>
+                            <label for="course1">Global Business & Digital Finance</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="course2" name="Course" value="Entrepreneurship and E-Commerce Systems">
+                            <label for="course2">Entrepreneurship and E-Commerce Systems</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="course3" name="Course" value="English Language and Literature">
+                            <label for="course3">English Language and Literature</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="course4" name="Course" value="Computing with Electronic Engineering">
+                            <label for="course4">Computing with Electronic Engineering</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Program Details</h2>
+                <div class="form-group">
+                    <label for="startDate">When would you like to start?</label>
+                    <select id="startDate" name="Preferred Start Date" required>
+                        <option value="" disabled selected>Select start option</option>
+                        <option value="Immediately">Immediately</option>
+                        <option value="Within 1 week">Within 1 week</option>
+                        <option value="Within 2 weeks">Within 2 weeks</option>
+                        <option value="Within 1 month">Within 1 month</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Briefly describe your relevant experience</label>
+                    <textarea id="experience" name="Relevant Experience" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goals">What are your learning goals?</label>
+                    <textarea id="goals" name="Learning Goals" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit">Submit Enrollment</button>
+            </form>
+            
+            <a href="finance-course.html" class="back-link">← Back to Course Information</a>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add form submission handling
+        document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+            // You can add validation or confirmation here
+            console.log('Form submitted');
+        });
+    </script>
+</body>
+</html>
